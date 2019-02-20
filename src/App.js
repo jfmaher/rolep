@@ -8,11 +8,16 @@ class App extends Component {
   }
 
   render() {
+    const list_items = this.state.data.map((item) =>
+      <li><ul>{Object.entries(item).map((item) =>
+        <li>{`${item[0]}: ${item[1]}`}</li>
+      )}</ul></li>);
+
     return (
       <div>
         <input/>
         <ul>
-          <li>hello</li>
+          {list_items}
         </ul>
       </div>
     );
