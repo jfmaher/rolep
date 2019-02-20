@@ -17,7 +17,7 @@ class App extends Component {
     const queried = this.state.data.filter((item) => {
       const values_arr = Object.values(item).flat();
       for (let i=0; i<values_arr.length; i++){
-        if (values_arr[i].includes(ev.target.value)) {
+        if (values_arr[i].toLowerCase().includes(ev.target.value.toLowerCase())) {
           return true;
         }
       }
