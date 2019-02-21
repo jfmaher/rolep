@@ -9,6 +9,8 @@ class App extends Component {
 
   /*
   onchange event handler for the input box.
+
+  Filters data on if one of the values in the dict has the query as a substring.
    */
   onchange = (ev) => {
     ev.preventDefault();
@@ -28,6 +30,7 @@ class App extends Component {
   };
 
   render() {
+    // The data is formatted as a list of lists of a single person's information
     const list_items = this.state.current.map((item) =>
       <li className='social-info'><ul>{Object.entries(item).map((item) =>
         <li>{`${item[0]}: ${item[1]}`}</li>
