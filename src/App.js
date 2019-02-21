@@ -29,7 +29,7 @@ class App extends Component {
 
   render() {
     const list_items = this.state.current.map((item) =>
-      <li><ul>{Object.entries(item).map((item) =>
+      <li className='social-info'><ul>{Object.entries(item).map((item) =>
         <li>{`${item[0]}: ${item[1]}`}</li>
       )}</ul></li>);
 
